@@ -6,9 +6,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get -y install curl xz-utils wget gpg  gcc git wget make libncurses-dev flex bison gperf \
                                          python python-dev python-serial cmake ninja-build nano vim ccache picocom  unrar-free \ 
                                          autoconf automake libtool libtool-bin g++ texinfo gawk ncurses-dev libexpat-dev \
-                                         sed  unzip bash help2man  bzip2
+                                         sed  unzip bash help2man  bzip2 zlib1g-dev libncurses5-dev sudo
 
-RUN apt-get -y install git sudo
 
 ## User account
 RUN adduser --disabled-password --gecos '' espuser && \
